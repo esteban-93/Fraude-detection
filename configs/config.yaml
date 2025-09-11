@@ -1,0 +1,42 @@
+# Configuration file for fraud detection project
+
+data:
+  raw_data_path: "data/raw/creditcard.csv"
+  processed_data_path: "data/processed/"
+  train_data_path: "data/processed/train_data.csv"
+  test_data_path: "data/processed/test_data.csv"
+
+model:
+  model_path: "models/trained/model"
+  scaler_path: "models/trained/scaler"
+  model_version: "1.0.0"
+  test_size: 0.2
+  random_state: 42
+
+training:
+  models:
+    - "logistic_regression"
+    - "random_forest"
+    - "svm"
+  resampling_method: "smote"  # smote, undersample, none
+  cv_folds: 3
+
+evaluation:
+  metrics:
+    - "accuracy"
+    - "precision"
+    - "recall"
+    - "f1_score"
+    - "roc_auc"
+  plots_path: "models/artifacts/plots/"
+
+deployment:
+  api_host: "0.0.0.0"
+  api_port: 8000
+  model_path: "models/trained/fraud_model.pkl"
+  scaler_path: "models/trained/scaler.pkl"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/fraud_detection.log"
