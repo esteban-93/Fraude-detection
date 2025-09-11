@@ -8,9 +8,9 @@ import joblib
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.fraud_detector.models.data_processor import DataProcessor
-from src.models.training.model_trainer import ModelTrainer
-from src.models.evaluation.model_evaluator import ModelEvaluator
-from src.utils.config_loader import load_config
+from src.fraud_detector.models.training.model_trainer import ModelTrainer
+from src.fraud_detector.models.evaluation.model_evaluator import ModelEvaluator
+from src.fraud_detector.utils.config_loader import load_config
 import logging
 
 def main():

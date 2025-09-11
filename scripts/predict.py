@@ -6,8 +6,8 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.models.inference.predictor import FraudPredictor
-from src.utils.config_loader import load_config
+from src.fraud_detector.models.inference.predictor import FraudPredictor
+from src.fraud_detector.utils.config_loader import load_config
 import pandas as pd
 import json
 
