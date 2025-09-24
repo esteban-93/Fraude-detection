@@ -15,8 +15,9 @@ logger = logging.getLogger(__name__)
 class DataProcessor:
     """Handles data preprocessing for fraud detection."""
     
-    def __init__(self, config: Dict[str, Any]):
-        self.config = config
+    # def __init__(self, config: Dict[str, Any]):
+    def __init__(self):
+        # self.config = config
         self.scaler = None
         self.feature_columns = None
         

@@ -20,8 +20,9 @@ logger = logging.getLogger(__name__)
 class ModelEvaluator:
     """Handles model evaluation and performance metrics."""
     
-    def __init__(self, config: Dict[str, Any]):
-        self.config = config
+    # def __init__(self, config: Dict[str, Any]):
+    def __init__(self):
+        # self.config = config
         self.metrics = {}
         
     def calculate_metrics(self, y_true: np.ndarray, y_pred: np.ndarray, 

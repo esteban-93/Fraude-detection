@@ -97,6 +97,9 @@ celerybeat.pid
 
 # Environments
 .env
+.env.development
+.env.example
+.env.production
 .venv
 env/
 venv/
@@ -149,3 +152,7 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
+
+#mflow
+mlartifacts/
+mlruns/
